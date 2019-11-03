@@ -12,14 +12,18 @@ import { Router } from '@angular/router';
 export class BookFormComponent implements OnInit {
 
   bookForm: FormGroup;
+  fileIsUploading = false;
+  fileUrl: string;
+  fileUploaded = false;
+
 
   constructor(private formBuilder: FormBuilder, private booksService: BooksService,
-              private router: Router) { }
-              
+    private router: Router) { }
+
   ngOnInit() {
     this.initForm();
   }
-  
+
   initForm() {
     this.bookForm = this.formBuilder.group({
       title: ['', Validators.required],
@@ -27,17 +31,34 @@ export class BookFormComponent implements OnInit {
       synopsis: ''
     });
   }
-  
+
   onSaveBook() {
     const title = this.bookForm.get('title').value;
     const author = this.bookForm.get('author').value;
     const synopsis = this.bookForm.get('synopsis').value;
-
     const newBook = new Book(title, author);
     newBook.synopsis = synopsis;
-    
+    if (this.fileUrl && this.fileUrl !== '') {
+      newBook.photo = this.fileUrl;
+    }
     this.booksService.createNewBook(newBook);
     this.router.navigate(['/books']);
   }
+
+  detectFiles(event: any) {
+    this.onUploadFile(event.target.files[0]);
+  }
+
+  onUploadFile(file: File) {
+    this.fileIsUploading = true;
+    this.booksService.uploadFile(file).then(
+      (url: string) => {
+        this.fileUrl = url;
+        this.fileIsUploading = false;
+        this.fileUploaded = true;
+      }
+    );
+  }
+
 }
 
