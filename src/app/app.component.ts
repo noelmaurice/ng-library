@@ -23,9 +23,7 @@ var firebaseConfig = {
 export class AppComponent {
   constructor() {
     // Your web app's Firebase configuration
-    
     // firebase.initializeApp(firebaseConfig);
-    
   }
 }
 
