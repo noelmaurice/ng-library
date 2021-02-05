@@ -1,3 +1,5 @@
+<img src="https://store.janinerobin.com/16531-large_default/femme-haut-de-maillot-de-bain-a-armatures-bleu.jpg" >Test</img>
+
 # Library
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.7.
