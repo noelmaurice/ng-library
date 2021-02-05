@@ -4,13 +4,13 @@
 
 <img src="https://github.com/noelmaurice/ng-library/blob/master/doc/demo/connexion.png" style="max-height: 300px;"/>
 
-## Enregistrement d'un livre
-
-<img src="https://github.com/noelmaurice/ng-library/blob/master/doc/demo/livre.png" style="max-height: 300px;"/>
-
 ## Liste des livres
 
 <img src="https://github.com/noelmaurice/ng-library/blob/master/doc/demo/livres.png" style="max-height: 300px;"/>
+
+## Enregistrement d'un livre
+
+<img src="https://github.com/noelmaurice/ng-library/blob/master/doc/demo/livre.png" style="max-height: 300px;"/>
 
 
 # Library
