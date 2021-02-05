@@ -2,7 +2,7 @@
 
 ## Fenêtre de connexion
 
-<img src=https://github.com/noelmaurice/ng-library/blob/master/doc/demo/connexion.png">Fenêtre de connexion</img>
+<img src="https://github.com/noelmaurice/ng-library/blob/master/doc/demo/connexion.png">Fenêtre de connexion</img>
 
 
 # Library
